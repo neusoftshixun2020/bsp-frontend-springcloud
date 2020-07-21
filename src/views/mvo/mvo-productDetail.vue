@@ -101,7 +101,7 @@ export default {
         this.productDetail = result.data.list;
       })
     },
-    
+
   }
 }
 </script>

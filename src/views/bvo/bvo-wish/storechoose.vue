@@ -1,13 +1,12 @@
 <template>
-      <div>
+      <div class="app-container">
         <el-col :span = '20' class = 'toolbar'>
-          <p class="title" style="color:#3CB371; font-weight: bold;">My Stores</p>
         </el-col>
         <el-row>
           <el-col :span="12" >
             <el-card class="box-card-ebay" width="100%">
               <div slot="header" class="clearfix">
-                <span style="color:#66CDAA; font-weight: bold; font-size: 18px">eBay</span>
+                <span style="color:#000000; font-weight: bold; font-size: 18px">eBay</span>
               </div>
               <div>
                 <el-table :data="ebayStoreList.slice((currentPage-1)*pagesize,currentPage*pagesize)"
@@ -33,7 +32,7 @@
           <el-col :span="12" >
             <el-card class="box-card-amazon">
               <div slot="header" class="clearfix">
-                <span style="color:#66CDAA; font-weight: bold; font-size: 18px">Amazon</span>
+                <span style="color:#000000; font-weight: bold; font-size: 18px">Amazon</span>
               </div>
               <div>
                 <el-table :data="amazonStoreList.slice((currentPage-1)*pagesize,currentPage*pagesize)"
@@ -53,12 +52,11 @@
                   @current-change="current_change">
                 </el-pagination>
               </div>
-
             </el-card>
           </el-col>
         </el-row>
         <div class="btn">
-        <el-button type = 'success' size="small" @click = 'handelPushBtn' round>Push</el-button>
+        <el-button type = 'primary' size="small" @click = 'handelPushBtn' round>Push</el-button>
         </div>
       </div>
 
@@ -232,7 +230,22 @@
 </script>
 
 <style>
+  /*.app-container{
+    z-index:1;
+    position: absolute;
+    min-height: 100%;
+    height:100%;
+    width: 100%;
+    background-image: url('../../../assets/background_images/img4.jpg');
+    background-repeat:no-repeat;
+    width:100%;
+    height:100%;
+    min-width:973px;
+    background-attachment:fixed;
+    background-size:100% auto;
+    overflow: hidden;
 
+  }*/
   .el-main {
     padding-bottom: 0;
     font-family: "Open Sans";

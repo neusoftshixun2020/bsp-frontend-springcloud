@@ -1,5 +1,5 @@
 ﻿<template>
-  <el-container id="main-content" class="clearfix">
+  <el-container id="main-content" class="app-container">
     <el-main>
       <el-form class="login-container" label-position="left" label-width="0px">
         <h3 class="login_title">Wallet Login</h3>
@@ -102,5 +102,21 @@
     margin: 0px auto 10% auto;
     text-align: center;
     color: #505458;
+  }
+  .app-container{
+    z-index:1;
+    position: absolute;
+    min-height: 100%;
+    height:100%;
+    width: 100%;
+    background-image: url('../../../assets/background_images/img4.jpg');
+    background-repeat:no-repeat;
+    width:100%;
+    height:100%;
+    min-width:973px;
+    background-attachment:fixed;
+    background-size:100% auto;
+    overflow: hidden;
+
   }
 </style>

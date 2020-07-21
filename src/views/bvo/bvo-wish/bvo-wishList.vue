@@ -1,5 +1,5 @@
 <template>
-  <div class="mixin-components-container">
+  <div class="app-container">
 <!--    <el-header>-->
 <!--        <h1 style="color: #2679b5;">-->
 <!--          Wish List-->
@@ -8,7 +8,7 @@
     <div class="list">
     <el-row :gutter="20" style="margin-top:30px;">
       <div v-for="product in wishList" :key="product.product.title">
-        <el-col :span="13">
+        <el-col :span="10">
           <el-card class="box-card1":body-style="{ padding: '10px' }">
 
             <div style="height:200px;">
@@ -22,8 +22,10 @@
                 <div class="sku">Stock: {{ product.product.stock }}</div>
 <!--                style="float: right; padding: 5px 3px 5px 3px; margin-top:20px; margin-right: 0px"-->
                 <div class="button" style="float: right;  margin-top:20px; margin-right: 10px">
-                  <el-button   icon="el-icon-delete"
-                              type="success" plain round size="mini" @click="remove(product)">remove</el-button>
+
+                  <el-button  icon="el-icon-delete"
+                              type="info"  plain round size="mini" @click="remove(product)">remove</el-button>
+
                 </div>
               </div>
 
@@ -135,33 +137,52 @@ export default {
 /*}*/
 .component-item{
   min-height: 100px;
-}
+}/*
+.app-container{
+  z-index:1;
+  position: absolute;
+  min-height: 100%;
+  height:100%;
+  width: 100%;
+  background-image: url('../../../assets/background_images/img4.jpg');
+  background-repeat:no-repeat;
+  width:100%;
+  height:100%;
+  min-width:973px;
+  background-attachment:fixed;
+  background-size:100% auto;
+  overflow: hidden;
+}*/
 .box-card1{
   height:240px;
-  width: 850px;
+  width: 480px;
+  margin-right: 0px;
   margin-top: 10px;
+
+
 }
 .title{
   font-weight: bold;
-  font-size:18px;
-//vertical-align: top;
-  color: #3a835d;
+  font-size:20px;
+  vertical-align: top;
+  color:#000000;
   font-weight: bold;
 }
 .price{
-  color:#b3450e;
+  color:#FA8072;
+
   font-size:16px;
   margin-top:12px;
 }
 .sku{
   font-size:16px;
-  color:#808080;
+  color:#000000;
   margin-top: 8px;
 }
 .info{
   float: right;
-  padding: 30px 180px 30px 0px;
-  margin-right: 230px;
+  padding: 20px 30px 30px 0px;
+  margin-right: 10px;
 }
 .button{
   float: left;

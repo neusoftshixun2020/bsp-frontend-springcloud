@@ -10,7 +10,7 @@
     <div>
     <el-col :span="7" v-for="product in productList" v-bind:key="product.prc_id">
 
-<el-card class="box-card-component" style="margin-left:8px;">
+<el-card class="box-card-component" style="margin-left:8px; ">
     <div slot="header" class="box-card-header">
       <img :src="product.productCategory.img_url" class="image" @click="showDetail(product)">
     </div>
@@ -39,6 +39,7 @@
 import PanThumb from '@/components/PanThumb'
 import Mallki from '@/components/TextHoverEffect/Mallki'
 export default {
+
   name: 'ProductScan',
   data() {
     return {
@@ -91,6 +92,22 @@ export default {
 }
 </style>
 <style lang="scss" scoped>
+ /* .app-container{
+    z-index:1;
+    position: absolute;
+    min-height: 100%;
+    height:100%;
+    width: 100%;
+    background-image: url('../../../assets/background_images/img4.jpg');
+    background-repeat:no-repeat;
+    width:100%;
+    height:100%;
+    min-width:973px;
+    background-attachment:fixed;
+    background-size:100% auto;
+    overflow: hidden;
+
+  }*/
 .box-card-component {
   .box-card-header {
     position: relative;
@@ -125,11 +142,25 @@ export default {
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: bold;
-    color: #000000;
+    color:#000000;
+
   }
    .progress-item1 {
     margin-bottom: 10px;
     font-size: 18px;
+    color:#E65D6E;
+  }
+  .index {
+    filter:alpha(Opacity=85);
+    -moz-opacity:0.85;
+    opacity: 0.85;
+  }
+  .img2{
+    width: 100px;
+    height: 100px;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-size: 100px auto;
     color: #b3450e;
   }
   @media only screen and (max-width: 1510px){
@@ -137,5 +168,6 @@ export default {
       display: none;
     }
   }
+
 }
 </style>

@@ -2,12 +2,7 @@
   <el-container id="main-content" class="clearfix">
     <el-header>
       <div class="page-header position-relative">
-        <h1 style="color: #2679b5;">
-          BVO
-          <small>
-            <i class="icon-double-angle-right" /> Order Payment
-          </small>
-        </h1>
+
       </div>
     </el-header>
     <el-main>
