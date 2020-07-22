@@ -10,7 +10,7 @@ import request from '@/utils/request'
 
 export function login(data) {
   return request({
-    url: 'user/checkUser',
+    url: 'userPermission/user/checkUser',
     method: 'post',
     data
   })
@@ -26,7 +26,7 @@ export function login(data) {
 
 export function getInfo(token) {
   return request({
-    url: '/user/getInfo',
+    url: 'userPermission/user/getInfo',
     method: 'post',
     headers: {
       token
@@ -36,14 +36,14 @@ export function getInfo(token) {
 
 export function logout() {
   return request({
-    url: '/user/logout',
+    url: 'userPermission//user/logout',
     method: 'post'
   })
 }
 
 export function addUser(data) {
   return request({
-    url: '/user/addUser',
+    url: 'userPermission//user/addUser',
     method: 'post',
     data
   })
@@ -57,14 +57,14 @@ export function addUser(data) {
 // }
 export function getVerifyCode() {
   return request({
-    url: '/user/getVerifyCodeNumber',
+    url: 'imageManager/image/getVerifyCodeNumber',
     method: 'post'
   })
 }
 
 export function fetchList(query) {
   return request({
-    url: 'user/userlist',
+    url: 'userPermission/user/userlist',
     method: 'post',
     params: query
   })
@@ -72,7 +72,7 @@ export function fetchList(query) {
 
 export function fetchUser(data) {
   return request({
-    url: 'user/userlist',
+    url: 'userPermission/user/userlist',
     method: 'post',
     data
 
@@ -81,7 +81,7 @@ export function fetchUser(data) {
 
 export function updateUser(data) {
   return request({
-    url: 'user/updateUser',
+    url: 'userPermission/user/updateUser',
     method: 'post',
     data
   })
@@ -89,7 +89,7 @@ export function updateUser(data) {
 
 export function deleteUser(data) {
   return request({
-    url: 'user/deleteUser',
+    url: 'userPermission/user/deleteUser',
     method: 'post',
     data
   })
@@ -97,7 +97,7 @@ export function deleteUser(data) {
 
 export function deleteAll(data) {
   return request({
-    url: 'user/deleteAll',
+    url: 'userPermission/user/deleteAll',
     method: 'post',
     data
   })
@@ -106,7 +106,7 @@ export function deleteAll(data) {
 
 export function searchUser(data) {
   return request({
-    url: 'user/searchUser',
+    url: 'userPermission/user/searchUser',
     method: 'post',
     data
   })

@@ -4,9 +4,9 @@
       <p v-text ='head'></p>
     </el-col>
 
-  
+
 <!--品牌信息-->
-    
+
     <div class="BrandTable">
       <el-table
         ref="multipleTable1"
@@ -15,7 +15,7 @@
         fit
         border
         @selection-change="selschange"
-     
+
         highlight-current-row
         width="80%"
       >
@@ -70,7 +70,7 @@
 
         <el-form-item label="Brand Logo" label-width="130px" prop='image_url'>
           <el-upload
-            action="http://localhost:8088/image/uploadImage"
+            action="http://localhost:8087/imageManager/image/uploadImage"
             list-type="picture-card"
             :on-preview="handlePictureCardPreview"
             :on-success="handleUploadSuccess"
@@ -110,7 +110,7 @@
 
         <el-form-item label="Brand Logo" label-width="130px" prop='image_url'>
           <el-upload
-            action="http://localhost:8088/image/uploadImage"
+            action="http://localhost:8087/imageManager/image/uploadImage"
             list-type="picture-card"
             :on-preview="handlePictureCardPreview"
             :on-success="handleUploadSuccess"
@@ -142,7 +142,7 @@ export default {
   name: 'brandDetail',
   data() {
     return {
-      orders:[],     
+      orders:[],
       brandList:[],
       downloadLoading: false,
       dialogVisible:false,
@@ -214,7 +214,7 @@ export default {
       console.log(this.brandList)
       })
     },
-   
+
     showaddBrand(){
       this.dialogVisible1 = true
       this.BrandData.name_en = ''
@@ -223,7 +223,7 @@ export default {
     this.$refs.BrandData.validate(valid => {
         if(valid) {
           this.BrandData.img_url = this.dialogImageUrl
-          
+
           console.log( this.BrandData.man_id)
           this.$store.dispatch('AddBrand',this.BrandData).then((result) => {
             if (result.code==200){
@@ -319,7 +319,7 @@ export default {
               type: 'info',
               message: `delete operation succeeded`
             })
-          
+
           }else{
             this.$message({
               type: 'info',

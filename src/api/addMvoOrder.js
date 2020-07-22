@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function getAwaitingPayment(data) {
     return request({
-      url: 'order/getAwaitingPayment',
+      url: 'order/order/getAwaitingPayment',
       method: 'post',
       data: data
     })
@@ -10,7 +10,7 @@ export function getAwaitingPayment(data) {
 
 export function getAwaitingShipment(data) {
     return request({
-      url: 'order/getAwaitingShipment',
+      url: 'order/order/getAwaitingShipment',
       method: 'post',
       data: data
     })
@@ -18,7 +18,7 @@ export function getAwaitingShipment(data) {
 
 export function getShiped(data) {
     return request({
-      url: 'order/getShiped',
+      url: 'order/order/getShiped',
       method: 'post',
       data: data
     })
@@ -26,28 +26,28 @@ export function getShiped(data) {
 
   export function getCompleted(data) {
     return request({
-      url: 'order/getCompleted',
+      url: 'order/order/getCompleted',
       method: 'post',
       data: data
     })
   }
   export function getCancelled(data) {
     return request({
-      url: 'order/getCancelled',
+      url: 'order/order/getCancelled',
       method: 'post',
       data: data
     })
   }
   export function deliver(data) {
     return request({
-      url: 'order/deliver',
+      url: 'order/order/deliver',
       method: 'post',
       data: data
     })
   }
   export function cancelOrder(data) {
     return request({
-      url: 'order/cancelOrder',
+      url: 'order/order/cancelOrder',
       method: 'post',
       data: data
     })
@@ -55,7 +55,7 @@ export function getShiped(data) {
 
   export function getTrack(data) {
     return request({
-      url: 'order/getTrack',
+      url: 'order/order/getTrack',
       method: 'post',
       data: data
     })

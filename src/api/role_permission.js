@@ -2,14 +2,14 @@ import request from '@/utils/request'
 
 export function getAllRoles() {
   return request({
-    url: '/permission/getAllRoles',
+    url: 'userPermission/permission/getAllRoles',
     method: 'get',
   })
 }
 
 export function addOrUpdateRole(role, operationFlag) {
   return request({
-    url: '/permission/addOrUpdateRole',
+    url: 'userPermission/permission/addOrUpdateRole',
     method: 'post',
     data: role,
     params: {
@@ -21,7 +21,7 @@ export function addOrUpdateRole(role, operationFlag) {
 
 export function deleteRole(role) {
   return request({
-    url: '/permission/deleteRole',
+    url: 'userPermission/permission/deleteRole',
     method: 'post',
     data: role,
   })
@@ -29,7 +29,7 @@ export function deleteRole(role) {
 
 export function getAllPermission(data) {
   return request({
-    url: '/permission/getAllPermissions',
+    url: 'userPermission/permission/getAllPermissions',
     method: 'post',
     data
   })
@@ -38,7 +38,7 @@ export function getAllPermission(data) {
 
 export function getAllParentRoute() {
   return request({
-    url: '/permission/getAllParentRoute',
+    url: 'userPermission/permission/getAllParentRoute',
     method: 'post',
   })
 }
@@ -46,7 +46,7 @@ export function getAllParentRoute() {
 
 export function getAllChildrenRouteByParent(data) {
   return request({
-    url: '/permission/getChildrenRouteByParent',
+    url: 'userPermission/permission/getChildrenRouteByParent',
     method: 'post',
     data
   })
@@ -56,7 +56,7 @@ export function getAllChildrenRouteByParent(data) {
 
 export function addOrUpdatePermission(data, operationFlag) {
   return request({
-    url: '/permission/addOrUpdatePermission',
+    url: 'userPermission/permission/addOrUpdatePermission',
     method: 'post',
     data,
     params: {
@@ -68,7 +68,7 @@ export function addOrUpdatePermission(data, operationFlag) {
 
 export function deletePermission(data) {
   return request({
-    url: '/permission/deletePermission',
+    url: 'userPermission/permission/deletePermission',
     method: 'post',
     data
   })

@@ -3,7 +3,7 @@ import request from '@/utils/request'
 export function  getEbayStoreList(store) {
   console.log("---api/getEbayStoreList----")
   return request({
-    url: '/bvo/getEbayStore',
+    url: 'basicInformation/bvo/getEbayStore',
     method: 'post',
     data:store
   })
@@ -12,7 +12,7 @@ export function  getEbayStoreList(store) {
 export function  getAmazonStoreList(store) {
   console.log("getAmazonStoreList")
   return request({
-    url: '/bvo/getAmazonStore',
+    url: 'basicInformation/bvo/getAmazonStore',
     method: 'post',
     data:store
 
@@ -22,7 +22,7 @@ export function  getAmazonStoreList(store) {
 export function  pushEbayStores(items) {
   console.log("getAmazonStoreList")
   return request({
-    url: '/bvo/addDropShipItem',
+    url: 'basicInformation/bvo/addDropShipItem',
     method: 'post',
     data:items
   })
@@ -31,7 +31,7 @@ export function  pushEbayStores(items) {
 export function  pushAmazonStores(items) {
   console.log("getAmazonStoreList")
   return request({
-    url: '/bvo/addDropShipItem',
+    url: 'basicInformation/bvo/addDropShipItem',
     method: 'post',
     data:items
   })

@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function login(loginInfo) {
   return request({
-    url: '/wallet/checkAccount',
+    url: 'wallet/wallet/checkAccount',
     method: 'post',
     data: loginInfo
   })
@@ -10,7 +10,7 @@ export function login(loginInfo) {
 
 export function register(data) {
   return request({
-    url: '/wallet/addAccount',
+    url: 'wallet/wallet/addAccount',
     method: 'post',
     data: data
   })
@@ -18,7 +18,7 @@ export function register(data) {
 
 export function getBalance(data) {
   return request({
-    url: '/wallet/getFund',
+    url: 'wallet/wallet/getFund',
     method: 'post',
     data: data
   })

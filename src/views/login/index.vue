@@ -153,7 +153,7 @@ export default {
         username: [{ required: true, trigger: 'blur', message: 'username cannot be empty' }],
         password: [{ required: true, trigger: 'blur', message: 'password cannot be empty'}]
       },
-      img_src: 'http://localhost:8088/user/getVerifyCode',
+      img_src: 'http://localhost:8087/imageManager/image/getVerifyCode',
       roleList: [],
       passwordType: 'password',
       capsTooltip: false,
@@ -301,7 +301,7 @@ export default {
     refresh_img() {
       console.log("1111111111111111")
       let num=Math.ceil(Math.random()*10);
-      this.img_src = 'http://localhost:8088/user/getVerifyCode?' + num
+      this.img_src = 'http://localhost:8087/imageManager/image/getVerifyCode?' + num
     },
     checkVerifyCode() {
       this.$store.dispatch("user/getVerifyCodeNumber").then(result => {
@@ -421,10 +421,10 @@ $light_gray:#eee;
     margin-top:5%;
     margin-left: 29%;
     opacity: 0.9;
-  
+
   }
   .login-form {
-   
+
     width: 520px;
     max-width: 100%;
     padding: 20% 35px 0;
@@ -440,7 +440,7 @@ $light_gray:#eee;
     display: inline-block;
   }
   .title-container {
-   
+
     .title {
       font-size: 26px;
       color:black;

@@ -2,7 +2,7 @@ import request from '../utils/request'
 
 export function getProducts() {
   return request({
-    url: '/product/getProducts',
+    url: 'basicInformation/product/getProducts',
     method: 'post',
     data: {
     }
@@ -11,7 +11,7 @@ export function getProducts() {
 
 export function addAndupdateProduct(pdata, flag) {
   return request({
-    url: '/product/addAndUpdateProduct',
+    url: 'basicInformation/product/addAndUpdateProduct',
     method: 'post',
     data: pdata,
     params: {
@@ -22,7 +22,7 @@ export function addAndupdateProduct(pdata, flag) {
 
 export function deleteProduct(data) {
   return request({
-    url: '/product/deleteProduct',
+    url: 'basicInformation/product/deleteProduct',
     method: 'post',
     data: data
   })

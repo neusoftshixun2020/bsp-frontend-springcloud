@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function fetchList() {
   return request({
-    url: '/productcategory/list',
+    url: 'basicInformation/productcategory/list',
     method: 'post',
 
   })
@@ -10,7 +10,7 @@ export function fetchList() {
 
 export function deleteRecord(data) {
   return request({
-    url: '/productCategory/deleteProductCategory',
+    url: 'basicInformation/productCategory/deleteProductCategory',
     method: 'post',
     data
   })
@@ -19,7 +19,7 @@ export function deleteRecord(data) {
 
 export function addRecord(PRC_ID,TITLE,CATEGORY_NAME,SECOND_CATEGORY,image) {
   return request({
-    url: '/productcategory/addRecord',
+    url: 'basicInformation/productcategory/addRecord',
     method: 'post',
     data: {
       PRC_ID,
@@ -33,7 +33,7 @@ export function addRecord(PRC_ID,TITLE,CATEGORY_NAME,SECOND_CATEGORY,image) {
 
 export function updateRecord(PRC_ID,TITLE,CATEGORY_NAME,SECOND_CATEGORY,image) {
   return request({
-    url: '/productcategory/updateRecord',
+    url: 'basicInformation/productcategory/updateRecord',
     method: 'post',
     data: {
       PRC_ID,
@@ -48,7 +48,7 @@ export function updateRecord(PRC_ID,TITLE,CATEGORY_NAME,SECOND_CATEGORY,image) {
 export function searchRecord(TITLE) {
 
   return request({
-    url: '/productcategory/searchRecord',
+    url: 'basicInformation/productcategory/searchRecord',
     method: 'post',
     data:{
       TITLE
@@ -58,7 +58,7 @@ export function searchRecord(TITLE) {
 
 export function changeState(PRC_ID,state) {
   return request({
-    url: '/productcategory/changeState',
+    url: 'basicInformation/productcategory/changeState',
     method: 'post',
     data: {
       PRC_ID,
@@ -69,7 +69,7 @@ export function changeState(PRC_ID,state) {
 
 export function addAndUpdateProductCategory(data, operationFlag) {
   return request({
-    url: '/productCategory/addOrUpdateProductCategory',
+    url: 'basicInformation/productCategory/addOrUpdateProductCategory',
     method: 'post',
     data: data,
     params: {
@@ -80,7 +80,7 @@ export function addAndUpdateProductCategory(data, operationFlag) {
 
 export function getAllProductCategory() {
   return request({
-    url: '/productCategory/getAllCategory',
+    url: 'basicInformation/productCategory/getAllCategory',
     method: 'post',
   })
 }

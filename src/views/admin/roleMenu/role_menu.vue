@@ -2,7 +2,7 @@
   <div class="app-container">
     <el-col :span = '20' class = 'toolbar'>
       <p v-text ='head'></p>
-      <el-button type = 'primary' size="small" @click="addRole">添加</el-button>
+      <el-button type = 'primary' size="small" @click="addRole">add</el-button>
     </el-col>
 
     <br>
